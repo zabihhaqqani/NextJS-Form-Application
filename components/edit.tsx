@@ -38,7 +38,7 @@ export const Edit: React.FC<EditProps> = ({ data, fetchData }) => {
       if (res.status === 200) {
         console.log("Data saved successfully")
       }
-    } catch (err) {
+    } catch (err: any) {
       setError(err.message || "An error occurred while saving.")
     } finally {
       setSaving(false)
