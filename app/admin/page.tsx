@@ -78,10 +78,7 @@ export default function Admin() {
                       Delete
                     </Button>
 
-                    <Edit
-                      data={data}
-                      fetchData={() => fetchData(setFormData)}
-                    />
+                    <Edit data={data} fetchData={() => fetchData()} />
                   </TableRow>
                 ))}
               </TableBody>
