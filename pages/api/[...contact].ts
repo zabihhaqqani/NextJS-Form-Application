@@ -31,8 +31,7 @@ export default async function handler(
   } else if (req.method === "GET") {
     res.status(200).json(formDataList)
   } else if (req.method === "DELETE") {
-    const { contact } = req.query
-    const id = contact[1]
+    const { id } = req.body
     formDataList = formDataList.filter((data) => data.id !== id)
     res.status(200).json({ message: "Form data deleted successfully" })
   } else if (req.method === "PUT") {

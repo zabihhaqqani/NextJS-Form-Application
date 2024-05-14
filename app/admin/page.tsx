@@ -39,7 +39,7 @@ export default function Admin() {
 
   const deleteFormData = async (id: string) => {
     try {
-      await axios.delete(`/api/contact/${id}`)
+      await axios.delete(`/api/contact`, { data: { id } })
       fetchData()
     } catch (error) {
       console.error("Error deleting form data:", error)
