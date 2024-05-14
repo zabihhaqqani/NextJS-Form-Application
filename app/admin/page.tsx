@@ -10,9 +10,9 @@ import {
   TableCell,
   TableHeader,
   TableRow,
+  TableHead,
 } from "@/components/ui/table"
 import { Edit } from "../../components/edit"
-import { TableRows } from "@/components/tableRows"
 
 interface FormData {
   id: string
@@ -56,7 +56,13 @@ export default function Admin() {
             <h2 className="my-4"> Form Submissions</h2>
             <Table>
               <TableHeader>
-                <TableRows />
+                <TableRow>
+                  <TableHead>Name</TableHead>
+                  <TableHead>Email</TableHead>
+                  <TableHead>Message</TableHead>
+                  <TableHead></TableHead>
+                  <TableHead></TableHead>
+                </TableRow>{" "}
               </TableHeader>
               <TableBody>
                 {formData?.map((data) => (
